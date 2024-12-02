@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
-import { Post } from "../../Types/Post";
-import { SortBy } from "./types";
+import { DispatchType, SortBy } from "./types";
 
 const SortingButtons = ({
   dispatch,
 }: {
-  dispatch: React.Dispatch<{
-    type: string;
-    items: Post[];
-    loading?: boolean;
-    error?: string | null;
-  }>;
+  dispatch: DispatchType;
 }) => {
   const [sortBy, setSortBy] = useState<SortBy>("date");
 

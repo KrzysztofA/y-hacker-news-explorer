@@ -1,3 +1,4 @@
+/// <reference types="vite-plugin-svgr/client" />
 import "./App.css";
 import LabelledTextInputForm from "./Components/LabelledTextInputForm";
 import PostsList from "./Components/PostsList";

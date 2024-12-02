@@ -1,6 +1,6 @@
-import { useEffect, useReducer } from "react";
-import { Post, PostJSON } from "../Types/Post";
 import axios from "axios";
+import { useEffect, useReducer } from "react";
+import { Post, PostJSON } from "../../Types/Post";
 
 const postsReducer = (
   state: { items: Post[]; loading?: boolean; error?: string | null },
@@ -63,7 +63,7 @@ const usePostReducer = (query?: string) => {
   const [itemsState, dispatchItems] = useReducer(postsReducer, { items: [], loading: true, error: null });
 
   useEffect(() => {
-    new Promise(async (_resolve, reject) => {
+    new Promise(async () => {
       let stop = false;
       try {
         const timeout = setTimeout(() => {
@@ -102,4 +102,5 @@ const usePostReducer = (query?: string) => {
   return { itemsData: itemsState.items, error: itemsState.error, loading: itemsState.loading, dispatch: dispatchItems };
 };
 
+export { postsReducer };
 export default usePostReducer;

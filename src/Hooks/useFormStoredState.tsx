@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 function useFormStoredState(key: string) {
   const [state, setState] = useState<string>("");

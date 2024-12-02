@@ -1,3 +1,13 @@
+import { Post } from "../../Types/Post";
+
 type SortBy = "title" | "date" | "author" | "-title" | "-date" | "-author";
 
-export type { SortBy };
+type DispatchType = React.Dispatch<{
+  type: string;
+  items: Post[];
+  loading?: boolean;
+  error?: string | null;
+}>
+
+export type { DispatchType, SortBy };
+
