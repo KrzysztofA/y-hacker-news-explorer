@@ -1,5 +1,4 @@
 /// <reference types="vite-plugin-svgr/client" />
-import "./App.css";
 import LabelledTextInputForm from "./Components/LabelledTextInputForm";
 import PostsList from "./Components/PostsList";
 import SortingButtons from "./Components/SortingButtons";
@@ -26,6 +25,7 @@ const App = () => {
           value={searchTermValue}
           onSubmit={onSubmit}
           onChange={onChangeCallback}
+          description="Search phrase"
         />
         <SortingButtons dispatch={dispatch} />
         {error && <div id="error">{error}</div>}

@@ -52,13 +52,13 @@ const SortingButtons = ({
   return (
     <span>
       Sort By:
-      <button onClick={() => setSortBy((prev) => (prev == "title" ? "-title" : "title"))}>
+      <button aria-description="Sort by title" id={`${sortBy == '-title' || sortBy == 'title' ? "active" : ""}`} onClick={() => setSortBy((prev) => (prev == "title" ? "-title" : "title"))}>
         Title {sortBy == "title" ? "-" : "+"}
       </button>
-      <button onClick={() => setSortBy((prev) => (prev == "date" ? "-date" : "date"))}>
+      <button aria-description="Sort by date" id={`${sortBy == '-date' || sortBy == 'date' ? "active" : ""}`} onClick={() => setSortBy((prev) => (prev == "date" ? "-date" : "date"))}>
         Date {sortBy == "date" ? "-" : "+"}
       </button>
-      <button onClick={() => setSortBy((prev) => (prev == "author" ? "-author" : "author"))}>
+      <button aria-description="Sort by author" id={`${sortBy == '-author' || sortBy == 'author' ? "active" : ""}`} onClick={() => setSortBy((prev) => (prev == "author" ? "-author" : "author"))}>
         Author {sortBy == "author" ? "-" : "+"}
       </button>
     </span>

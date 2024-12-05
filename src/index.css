@@ -13,11 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -53,6 +61,13 @@ span {
   margin: 5px;
 }
 
+main {
+  max-width: 100vw;
+  text-wrap: auto;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
 .load {
   display: flex;
   flex-direction: column;
@@ -66,13 +81,14 @@ span {
 .load svg {
   max-height: 250px;
   max-width: 250px;
-  animation: logo-spin infinite 2.5s linear;
+  animation: load infinite 2.5s linear;
 }
 
 @keyframes load {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -90,6 +106,7 @@ span {
   flex-direction: column;
   justify-content: center;
   height: 90vh;
+  background-color: #242424;
 }
 
 #error {
@@ -107,12 +124,24 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+#active {
+  background-color: #2a3a3a;
+}
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-reduced-motion) {
+  .load {
+    animation: none;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -120,10 +149,23 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 800px) {
+  .division {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .division aside {
+    height: 45vh;
   }
 }
