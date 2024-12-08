@@ -1,14 +1,11 @@
+import { TextInput } from "./types";
+
 const LabelledTextInput = ({
   title,
   value,
   id,
   onChange,
-}: {
-  title: string;
-  value: string;
-  id: string;
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
-}) => {
+}: TextInput) => {
   return (
     <>
       <label htmlFor={id}>{title}</label>

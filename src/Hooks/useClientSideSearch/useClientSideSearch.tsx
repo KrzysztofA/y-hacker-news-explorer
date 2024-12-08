@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react";
-import { Post } from "../Types/Post";
+import Post from "../../Types/Post";
 
 function useClientSideSearch(key: string, itemsData: Post[]) {
   const [searchTerm, setSearchTerm] = useState<string>(

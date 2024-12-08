@@ -1,4 +1,4 @@
-import { Post } from "../../Types/Post";
+import Post from "../../Types/Post";
 
 const PostView = ({ item }: { item: Post }) => {
   return (

@@ -1,4 +1,4 @@
-import { Post } from "../../Types/Post";
+import Post from "../../Types/Post";
 import PostView from "../PostView";
 
 const PostsList = ({ items }: { items: Post[] }) => {
